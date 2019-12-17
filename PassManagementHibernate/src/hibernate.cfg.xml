@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" " http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+    <!--property name="hibernate.connection.url">jdbc:derby://localhost:1527/pass_management</property-->
+    <property name="hibernate.connection.url">jdbc:derby:pass_management</property>
+    <property name="hibernate.connection.username">administrator</property>
+    <property name="hibernate.connection.password">P4ssw0rd*2015</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <!--Hibernate3-->
+    <!--property name="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</property-->
+    <!--Hibernate4-->
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="connection.pool_size">20</property>
+    <mapping class="mx.gob.org.ipn.cic.cyber.pmh.entities.Users"/>
+    <mapping class="mx.gob.org.ipn.cic.cyber.pmh.entities.Roles"/>
+    <mapping class="mx.gob.org.ipn.cic.cyber.pmh.entities.Permission"/>
+    <mapping class="mx.gob.org.ipn.cic.cyber.pmh.entities.Types"/>
+    <mapping class="mx.gob.org.ipn.cic.cyber.pmh.entities.Account"/>
+  </session-factory>
+</hibernate-configuration>
